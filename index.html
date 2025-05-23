@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrinho 2025 - Impacto Ambiental</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Agrinho 2025 - Impacto da Agricultura Intensiva</header>
+  <div class="botoes">
+    <button onclick="mostrarTexto('impacto')">Impacto Ambiental</button>
+    <button onclick="mostrarTexto('consequencias')">Consequências</button>
+    <button onclick="mostrarTexto('solucoes')">Soluções</button>
+    <button onclick="mostrarTexto('grafico')">Dados & Gráficos</button>
+  </div>
+
+  <div id="conteudo">
+    <!-- Blocos de texto aparecerão aqui -->
+  </div>
+
+  <div class="agrinho">
+    <h2>Projeto Agrinho 2025</h2>
+    <img src="agrinho_ilustrado.jpg" alt="Projeto Agrinho">
+  </div>
+
+  <section class="novas-paginas">
+    <h2>Curiosidades</h2>
+    <img src="curiosidade_ilustrada.jpg" alt="Curiosidades sobre agricultura">
+    <p>Sabia que o Brasil é um dos maiores exportadores de soja do mundo? A produção sustentável pode reduzir impactos ambientais e preservar ecossistemas.</p>
+  </section>
+
+  <section class="novas-paginas">
+    <h2>Como Ajudar o Planeta</h2>
+    <img src="ajuda_planeta.jpg" alt="Como ajudar o planeta">
+    <p>Estudantes podem contribuir com ações como reciclagem, economia de água e alimentação mais consciente. Participe de projetos locais!</p>
+  </section>
+
+  <section class="novas-paginas">
+    <h2>Vídeo Educativo</h2>
+    <iframe src="https://www.youtube.com/embed/PJh4T5t8TAE" title="Vídeo sobre agricultura sustentável" allowfullscreen></iframe>
+  </section>
+
+  <section class="quiz-container">
+    <h3>Quiz Rápido</h3>
+    <p>Qual país lidera a produção de soja no mundo?</p>
+    <ul>
+      <li><input type="radio" name="quiz" id="a"> <label for="a">Argentina</label></li>
+      <li><input type="radio" name="quiz" id="b"> <label for="b">China</label></li>
+      <li><input type="radio" name="quiz" id="c"> <label for="c">Brasil</label></li>
+      <li><input type="radio" name="quiz" id="d"> <label for="d">Estados Unidos</label></li>
+    </ul>
+    <button onclick="alert('A resposta correta é: Brasil!')">Ver resposta</button>
+  </section>
+
+  <footer>
+    © 2025 Projeto Agrinho. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function mostrarTexto(id) {
+      const conteudo = document.getElementById('conteudo');
+      let html = '';
+      if (id === 'impacto') {
+        html = `<div class="texto"><h2>Impacto Ambiental</h2><p>A agricultura intensiva pode causar desmatamento, poluição de rios e perda de biodiversidade.</p><img src="impacto_ambiental.jpg"></div>`;
+      } else if (id === 'consequencias') {
+        html = `<div class="texto"><h2>Consequências</h2><p>O solo pode ficar infértil, os animais perdem seus habitats e há aumento na emissão de gases de efeito estufa.</p><img src="consequencias.jpg"></div>`;
+      } else if (id === 'solucoes') {
+        html = `<div class="texto"><h2>Soluções</h2><p>Rotações de culturas, uso consciente de defensivos e reflorestamento são práticas sustentáveis.</p><img src="solucoes.jpg"></div>`;
+      } else if (id === 'grafico') {
+        html = `<div class="texto"><h2>Dados & Gráficos</h2><p>Veja abaixo um gráfico de uso de agrotóxicos por país:</p><img src="grafico_dados.jpg"></div>`;
+      }
+      conteudo.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
